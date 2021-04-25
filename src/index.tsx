@@ -13,6 +13,7 @@ const App = () => {
       <Search />
       <EventComponent />
       <SearchRef />
+      <p>---- Redux -----</p>
     </div>
   );
 };
