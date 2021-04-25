@@ -1,11 +1,20 @@
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import EventComponent from './events/EventComponent';
+import Parent from './props/Parent';
+import SearchRef from './refs/SearchRef';
+import List from './state/List';
+import Search from './state/Search';
 
 const App = () => {
-    return (
-        <div>
-          <h1>Hi There!</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Parent />
+      <List />
+      <Search />
+      <EventComponent />
+      <SearchRef />
+    </div>
+  );
+};
 
-ReactDOM.render(<App />, document.querySelector("#root"))
+ReactDOM.render(<App />, document.querySelector('#root'));
