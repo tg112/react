@@ -14,7 +14,7 @@ const GuestList: FC = () => {
       <h3>Guest List</h3>
       <ul>
         {lists.map((guest) => (
-          <li>{guest}</li>
+          <li key={guest}>{guest}</li>
         ))}
       </ul>
       <input type="text" onChange={(e) => setName(e.target.value)} />
