@@ -1,9 +1,11 @@
 import axios from "axios";
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
+import { Dispatch} from "redux";
 
-const searchRepositories = (term: string) => {
-    return async (dispatch: any) => {
+export const searchRepositories = (term: string) => {
+    // Dispatch<Action>でdispatchの内容に型を与える。
+    return async (dispatch: Dispatch<Action>) => {
         dispatch({
             type: ActionType.SEARCH_REPOSITORIES
         });
@@ -21,7 +23,7 @@ const searchRepositories = (term: string) => {
 
           dispatch({
               type: ActionType.SEARCH_REPOSITORIES_SUCCESS,
-              payload: names;
+              payload: names
           })
         } catch (err) {
           dispatch({
